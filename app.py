@@ -84,7 +84,7 @@ def index():
   <div class="container">
     <div class="row center">
       <div class="col-12 marg-bot">
-        <h1 class="center under">Covider flaskero piturro</h1>
+        <h1 class="center under">Covid flaskero</h1>
       </div>
       <div class="col-6">
         <h2>Confirmados totales en """ + str(pais) + """: <span>""" + str(confirmados) + """</span></h2>
