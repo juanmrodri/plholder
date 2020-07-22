@@ -9,7 +9,7 @@ covid.get_data()
 
 paises = covid.list_countries()
 
-locales = cases = covid.get_status_by_country_name("Argentina")
+locales = covid.get_status_by_country_name("Argentina")
 
 pais = locales['country']
 confirmados = locales['confirmed']
