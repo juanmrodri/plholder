@@ -1,0 +1,59 @@
+body {
+    font-family: "Roboto Mono", monospace;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+}
+
+h2 {
+    font-size: 18px;
+    line-height: 3rem;
+}
+
+span {
+    font-weight: 700;
+}
+
+.marg-bot {
+    bottom: 1rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.row {
+    padding-top: 100px;
+}
+
+.badge-warning {
+    margin: 1rem 0 2rem 0;
+}
+
+.row {
+    flex-direction: column;
+}
+
+.col-6 {
+    margin: 1rem auto;
+    max-width: 100%;
+}
+
+.red {
+    background-color: #dc3545;
+}
+
+.green {
+    background-color: #28a745;
+}
+
+@media only screen and (min-width: 768px) {
+    .row {
+        flex-direction: row;
+    }
+
+    .col-6 {
+        margin: 0 auto;
+        max-width: 50%;
+    }
+}

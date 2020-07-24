@@ -20,6 +20,18 @@ confirmados = locales['confirmed']
 activos = locales['active']
 muertes = locales['deaths']
 recuperados = locales['recovered']
+
+## aca tomamos prestada data relacionada con el covid ##
+# por ahora la pagina del gob #
+
+url = "https://www.argentina.gob.ar/salud/coronavirus-COVID-19"
+page = requests.get(url) 
+soup = BeautifulSoup(page.content, "html.parser")
+info_prins = soup.find_all('p', "margin-0")
+
+for uno in info_prins:
+    prim = uno.find_all('p')
+
 #print(locales.keys())
 #print(locales.values())
 #arg = locales.get("country")
@@ -111,6 +123,10 @@ def index():
             margin: 0 auto;
             max-width: 50%;
         }
+        
+        .marginer {
+        margin-top: 3rem;
+      }
     }
 </style>
 
@@ -146,6 +162,23 @@ def index():
                 <p>""" + str(covid.get_total_active_cases()) + """</p>
             </div>
         </div>
+        <div class="col-6">
+        <div class="card text-center marginer">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Recomendaciones del Gobierno nacional</h5>
+            <p class="card-text">
+              """ + str(prim[0]) + """
+            </p>
+            <a href="https://www.argentina.gob.ar/salud/coronavirus-COVID-19" class="btn btn-primary">+ info</a>
+          </div>
+          <div class="card-footer text-muted">
+            """ + str(fecha_hoy) + """
+          </div>
+        </div>
+      </div>
     </div>
     <footer class="center"><span class="badge badge-primary">Proton-team</span>-Julio 2020</footer>
 </body>
