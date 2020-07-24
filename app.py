@@ -60,6 +60,7 @@ def index():
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covid 19 - Flaskero</title>
     <!-- CSS only -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -144,7 +145,7 @@ def index():
             </div>
             <div class="col-6">
                 <h2>Confirmados totales en """ + str(pais) + """: <span class="alert alert-danger">""" + str(confirmados) + """</span></h2>
-                <span class="badge badge-warning">Reporte - """ + str(fecha_hoy) + """</span>
+                <span class="badge badge-warning">Reporte - """ + str(fecha_hoy) + """ <i class="fas fa-calendar-check"></i></span>
                 <ul class="list-group">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         Activos
@@ -164,14 +165,14 @@ def index():
             <div class="col-6 center">
                 <img src='https://www.muycomputer.com/wp-content/uploads/2020/07/COVID-19.jpg' alt="peso"
                     class="img-fluid" />
-                <span class="badge badge-warning">Infectados en el mundo: </span>
+                <span class="badge badge-warning"><i class="fas fa-exclamation-triangle"></i> Infectados en el mundo: <i class="fas fa-exclamation-triangle"></i></span>
                 <p>""" + str(covid.get_total_active_cases()) + """</p>
             </div>
         </div>
         <div class="col-6">
         <div class="card text-center marginer">
           <div class="card-header">
-            Featured
+            información importante
           </div>
           <div class="card-body">
             <h5 class="card-title">Recomendaciones del Gobierno nacional</h5>
