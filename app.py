@@ -113,6 +113,12 @@ def index():
     .green {
         background-color: #28a745;
     }
+    
+    footer {
+        margin: 1rem auto;
+        font-size: 10px;
+    }
+    
 
     @media only screen and (min-width: 768px) {
         .row {
@@ -180,7 +186,7 @@ def index():
         </div>
       </div>
     </div>
-    <footer class="center"><span class="badge badge-primary">Proton-team</span>-Julio 2020</footer>
+    <footer class="center"> Proton-team / Julio 2020</footer>
 </body>
 
 </html>
