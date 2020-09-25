@@ -5,6 +5,4 @@
 / future fixes, spliting the code
 / user input
 
-
-
-![Image of Yaktocat](https://www.muycomputer.com/wp-content/uploads/2020/07/COVID-19.jpg)
+<div style="width: 150px">(https://www.muycomputer.com/wp-content/uploads/2020/07/COVID-19.jpg)</div>
