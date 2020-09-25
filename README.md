@@ -5,3 +5,4 @@
 / future fixes, spliting the code
 / user input
 
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
