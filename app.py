@@ -7,7 +7,7 @@ from datetime import date
 
 
 covid = Covid()
-covid.get_data() 
+#covid.get_data() 
 
 fecha_hoy = date.today()
 
@@ -21,27 +21,17 @@ activos = locales['active']
 muertes = locales['deaths']
 recuperados = locales['recovered']
 
-## aca tomamos prestada data relacionada con el covid ##
-# por ahora la pagina del gob #
 
-url = "https://www.argentina.gob.ar/salud/coronavirus-COVID-19"
-page = requests.get(url) 
-soup = BeautifulSoup(page.content, "html.parser")
-info_prins = soup.find_all('p', "margin-0")
+print(locales.keys())
+print(locales.values())
+arg = locales.get("country")
 
-for uno in info_prins:
-    prim = uno.find_all('p')
+for x in locales:
+    print(x, ":", locales[x])
 
-#print(locales.keys())
-#print(locales.values())
-#arg = locales.get("country")
-
-#for x in locales:
-    #print(x, ":", locales[x])
-
-#print("casos totales: " + str(covid.get_total_active_cases()))
-#print("Total recuperados: " + str(covid.get_total_recovered()))
-#print("Muertes en todo el mundo: " + str(covid.get_total_deaths()))
+print("casos totales: " + str(covid.get_total_active_cases()))
+print("Total recuperados: " + str(covid.get_total_recovered()))
+print("Muertes en todo el mundo: " + str(covid.get_total_deaths()))
 
 # generamos instancia de Flask en app
 app = Flask(__name__)
@@ -170,24 +160,24 @@ def index():
             </div>
         </div>
         <div class="col-6">
-        <div class="card text-center marginer">
+        <!-- deprecated <div class="card text-center marginer">
           <div class="card-header">
             información importante
           </div>
           <div class="card-body">
             <h5 class="card-title">Recomendaciones del Gobierno nacional</h5>
             <p class="card-text">
-              """ + str(prim[0]) + """
+              """ """
             </p>
             <a href="https://www.argentina.gob.ar/salud/coronavirus-COVID-19" class="btn btn-primary">+ info</a>
           </div>
           <div class="card-footer text-muted">
             """ + str(fecha_hoy) + """
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
-    <footer class="center"> Proton-team / Julio 2020</footer>
+    <footer class="center"> Proton-team / Julio 2021</footer>
 </body>
 
 </html>
