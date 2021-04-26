@@ -1,13 +1,13 @@
-#importamos flask y tambien render template, este segundo nos ayuda a mostrar el index, es lo que le da la capacidad a flask de mostrar un template
+# importamos flask y tambien render template, este segundo nos ayuda a mostrar el index, es lo que le da la capacidad a flask de mostrar un template
 from flask import Flask, render_template
 from covid import Covid
-from bs4 import BeautifulSoup 
+from bs4 import BeautifulSoup
 import requests
 from datetime import date
 
 
 covid = Covid()
-#covid.get_data() 
+# covid.get_data()
 
 fecha_hoy = date.today()
 
@@ -22,24 +22,24 @@ muertes = locales['deaths']
 recuperados = locales['recovered']
 
 
-print(locales.keys())
-print(locales.values())
-arg = locales.get("country")
+# print(locales.keys())
+# print(locales.values())
+#arg = locales.get("country")
 
-for x in locales:
-    print(x, ":", locales[x])
+# for x in locales:
+#    print(x, ":", locales[x])
 
-print("casos totales: " + str(covid.get_total_active_cases()))
-print("Total recuperados: " + str(covid.get_total_recovered()))
-print("Muertes en todo el mundo: " + str(covid.get_total_deaths()))
+#print("casos totales: " + str(covid.get_total_active_cases()))
+#print("Total recuperados: " + str(covid.get_total_recovered()))
+#print("Muertes en todo el mundo: " + str(covid.get_total_deaths()))
 
 # generamos instancia de Flask en app
 app = Flask(__name__)
 
+
 @app.route("/")
 # esto siempre va a esperar una funcion, asique la definimos asi
 # es decir siempre que el usuario entre a esta ruta, se va a ejecutar esta funcion
-
 def index():
     html = """
     <!DOCTYPE html>
@@ -183,5 +183,7 @@ def index():
 </html>
     """
     return html
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=3000)
