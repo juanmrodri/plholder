@@ -44,7 +44,6 @@ def index():
     html = """
     <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,77 +53,83 @@ def index():
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
 </head>
 <style>
-    body {
-        font-family: "Roboto Mono", monospace;
-        font-size: 14px;
-        color: rgb(0, 0, 0);
-        background-color: #fff;
-    }
+body {
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+}
 
-    h2 {
-        font-size: 18px;
-        line-height: 3rem;
-    }
+h2 {
+  font-size: 18px;
+  line-height: 3rem;
+}
 
-    span {
-        font-weight: 700;
-    }
+span {
+  font-weight: 700;
+}
 
-    .marg-bot {
-        bottom: 1rem;
-    }
+.marg-bot {
+  bottom: 1rem;
+}
 
-    .center {
-        text-align: center;
-    }
+.center {
+  text-align: center;
+}
 
-    .row {
-        padding-top: 100px;
-    }
+.row {
+  padding-top: 100px;
+}
 
-    .badge-warning {
-        margin: 1rem 0 2rem 0;
-    }
+.badge {
+  padding: 5px 10px;
+}
 
-    .row {
-        flex-direction: column;
-    }
+.badge-warning {
+  margin: 1rem 0 2rem 0;
+}
 
-    .col-6 {
-        margin: 1rem auto;
-        max-width: 100%;
-    }
+.row {
+  flex-direction: column;
+}
 
-    .red {
-        background-color: #dc3545;
-    }
+.col-6 {
+  margin: 1rem auto;
+  max-width: 100%;
+}
 
-    .green {
-        background-color: #28a745;
-    }
-    
-    footer {
-        margin: 1rem auto;
-        font-size: 10px;
-    }
-    
+.red {
+  background-color: #dc3545;
+}
 
-    @media only screen and (min-width: 768px) {
-        .row {
-            flex-direction: row;
-        }
+.green {
+  background-color: #28a745;
+}
 
-        .col-6 {
-            margin: 0 auto;
-            max-width: 50%;
-        }
-        
-        .marginer {
-        margin-top: 3rem;
-      }
-    }
+footer {
+  margin: 1rem auto;
+  font-size: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .col-6 {
+    margin: 0 auto;
+    max-width: 50%;
+  }
+
+  .marginer {
+    margin-top: 3rem;
+  }
+}
+
 </style>
 
 <body>

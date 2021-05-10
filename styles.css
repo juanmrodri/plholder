@@ -1,59 +1,72 @@
 body {
-    font-family: "Roboto Mono", monospace;
-    font-size: 14px;
-    color: rgb(0, 0, 0);
-    background-color: #fff;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  background-color: #fff;
 }
 
 h2 {
-    font-size: 18px;
-    line-height: 3rem;
+  font-size: 18px;
+  line-height: 3rem;
 }
 
 span {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .marg-bot {
-    bottom: 1rem;
+  bottom: 1rem;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .row {
-    padding-top: 100px;
+  padding-top: 100px;
+}
+
+.badge {
+  padding: 5px 10px;
 }
 
 .badge-warning {
-    margin: 1rem 0 2rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .row {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .col-6 {
-    margin: 1rem auto;
-    max-width: 100%;
+  margin: 1rem auto;
+  max-width: 100%;
 }
 
 .red {
-    background-color: #dc3545;
+  background-color: #dc3545;
 }
 
 .green {
-    background-color: #28a745;
+  background-color: #28a745;
+}
+
+footer {
+  margin: 1rem auto;
+  font-size: 10px;
 }
 
 @media only screen and (min-width: 768px) {
-    .row {
-        flex-direction: row;
-    }
+  .row {
+    flex-direction: row;
+  }
 
-    .col-6 {
-        margin: 0 auto;
-        max-width: 50%;
-    }
+  .col-6 {
+    margin: 0 auto;
+    max-width: 50%;
+  }
+
+  .marginer {
+    margin-top: 3rem;
+  }
 }
